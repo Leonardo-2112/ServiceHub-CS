@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\leonardo.asousa4\\Desktop\\servicehub\\ServiceHubClass\\ServiceHubClass.csproj": {}
+    "C:\\Users\\leonardo.asousa4\\source\\repos\\servicehub\\ServiceHubClass\\ServiceHubClass.csproj": {}
   },
   "projects": {
-    "C:\\Users\\leonardo.asousa4\\Desktop\\servicehub\\ServiceHubClass\\ServiceHubClass.csproj": {
+    "C:\\Users\\leonardo.asousa4\\source\\repos\\servicehub\\ServiceHubClass\\ServiceHubClass.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leonardo.asousa4\\Desktop\\servicehub\\ServiceHubClass\\ServiceHubClass.csproj",
+        "projectUniqueName": "C:\\Users\\leonardo.asousa4\\source\\repos\\servicehub\\ServiceHubClass\\ServiceHubClass.csproj",
         "projectName": "ServiceHubClass",
-        "projectPath": "C:\\Users\\leonardo.asousa4\\Desktop\\servicehub\\ServiceHubClass\\ServiceHubClass.csproj",
+        "projectPath": "C:\\Users\\leonardo.asousa4\\source\\repos\\servicehub\\ServiceHubClass\\ServiceHubClass.csproj",
         "packagesPath": "C:\\Users\\leonardo.asousa4\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leonardo.asousa4\\Desktop\\servicehub\\ServiceHubClass\\obj\\",
+        "outputPath": "C:\\Users\\leonardo.asousa4\\source\\repos\\servicehub\\ServiceHubClass\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +49,12 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.4.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -539,6 +539,9 @@
       "ServiceHubClass/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "MySql.Data": "8.4.0"
+        },
         "compile": {
           "bin/placeholder/ServiceHubClass.dll": {}
         },
@@ -1811,11 +1814,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\leonardo.asousa4\\Desktop\\servicehub\\servicehub\\servicehub.csproj",
+      "projectUniqueName": "C:\\Users\\leonardo.asousa4\\source\\repos\\servicehub\\servicehub\\servicehub.csproj",
       "projectName": "servicehub",
-      "projectPath": "C:\\Users\\leonardo.asousa4\\Desktop\\servicehub\\servicehub\\servicehub.csproj",
+      "projectPath": "C:\\Users\\leonardo.asousa4\\source\\repos\\servicehub\\servicehub\\servicehub.csproj",
       "packagesPath": "C:\\Users\\leonardo.asousa4\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\leonardo.asousa4\\Desktop\\servicehub\\servicehub\\obj\\",
+      "outputPath": "C:\\Users\\leonardo.asousa4\\source\\repos\\servicehub\\servicehub\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1836,8 +1839,8 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\leonardo.asousa4\\Desktop\\servicehub\\ServiceHubClass\\ServiceHubClass.csproj": {
-              "projectPath": "C:\\Users\\leonardo.asousa4\\Desktop\\servicehub\\ServiceHubClass\\ServiceHubClass.csproj"
+            "C:\\Users\\leonardo.asousa4\\source\\repos\\servicehub\\ServiceHubClass\\ServiceHubClass.csproj": {
+              "projectPath": "C:\\Users\\leonardo.asousa4\\source\\repos\\servicehub\\ServiceHubClass\\ServiceHubClass.csproj"
             }
           }
         }
