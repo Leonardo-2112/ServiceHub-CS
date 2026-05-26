@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36804.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "servicehub", "servicehub\servicehub.csproj", "{E8176861-99D2-48B6-A5C9-0AC18BCE5511}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceHubClass", "ServiceHubClass\ServiceHubClass.csproj", "{202BA11A-983A-418B-9F0B-712A1F8DB5C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8176861-99D2-48B6-A5C9-0AC18BCE5511}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8176861-99D2-48B6-A5C9-0AC18BCE5511}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8176861-99D2-48B6-A5C9-0AC18BCE5511}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8176861-99D2-48B6-A5C9-0AC18BCE5511}.Release|Any CPU.Build.0 = Release|Any CPU
+		{202BA11A-983A-418B-9F0B-712A1F8DB5C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{202BA11A-983A-418B-9F0B-712A1F8DB5C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{202BA11A-983A-418B-9F0B-712A1F8DB5C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{202BA11A-983A-418B-9F0B-712A1F8DB5C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C5C5B2B9-2690-4012-8EA0-25F6EF7A72EF}
+	EndGlobalSection
+EndGlobal
