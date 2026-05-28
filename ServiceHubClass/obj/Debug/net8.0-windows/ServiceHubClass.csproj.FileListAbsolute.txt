@@ -10,3 +10,16 @@ C:\Users\leonardo.asousa4\Desktop\servicehub\ServiceHubClass\obj\Debug\net8.0-wi
 C:\Users\leonardo.asousa4\Desktop\servicehub\ServiceHubClass\obj\Debug\net8.0-windows\refint\ServiceHubClass.dll
 C:\Users\leonardo.asousa4\Desktop\servicehub\ServiceHubClass\obj\Debug\net8.0-windows\ServiceHubClass.pdb
 C:\Users\leonardo.asousa4\Desktop\servicehub\ServiceHubClass\obj\Debug\net8.0-windows\ref\ServiceHubClass.dll
+C:\Users\leonardo.asousa4\source\repos\servicehub\ServiceHubClass\bin\Debug\net8.0-windows\ServiceHubClass.deps.json
+C:\Users\leonardo.asousa4\source\repos\servicehub\ServiceHubClass\bin\Debug\net8.0-windows\ServiceHubClass.dll
+C:\Users\leonardo.asousa4\source\repos\servicehub\ServiceHubClass\bin\Debug\net8.0-windows\ServiceHubClass.pdb
+C:\Users\leonardo.asousa4\source\repos\servicehub\ServiceHubClass\obj\Debug\net8.0-windows\ServiceHubClass.csproj.AssemblyReference.cache
+C:\Users\leonardo.asousa4\source\repos\servicehub\ServiceHubClass\obj\Debug\net8.0-windows\ServiceHubClass.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\leonardo.asousa4\source\repos\servicehub\ServiceHubClass\obj\Debug\net8.0-windows\ServiceHubClass.AssemblyInfoInputs.cache
+C:\Users\leonardo.asousa4\source\repos\servicehub\ServiceHubClass\obj\Debug\net8.0-windows\ServiceHubClass.AssemblyInfo.cs
+C:\Users\leonardo.asousa4\source\repos\servicehub\ServiceHubClass\obj\Debug\net8.0-windows\ServiceHubClass.csproj.CoreCompileInputs.cache
+C:\Users\leonardo.asousa4\source\repos\servicehub\ServiceHubClass\obj\Debug\net8.0-windows\ServiceHubClass.sourcelink.json
+C:\Users\leonardo.asousa4\source\repos\servicehub\ServiceHubClass\obj\Debug\net8.0-windows\ServiceHubClass.dll
+C:\Users\leonardo.asousa4\source\repos\servicehub\ServiceHubClass\obj\Debug\net8.0-windows\refint\ServiceHubClass.dll
+C:\Users\leonardo.asousa4\source\repos\servicehub\ServiceHubClass\obj\Debug\net8.0-windows\ServiceHubClass.pdb
+C:\Users\leonardo.asousa4\source\repos\servicehub\ServiceHubClass\obj\Debug\net8.0-windows\ref\ServiceHubClass.dll
