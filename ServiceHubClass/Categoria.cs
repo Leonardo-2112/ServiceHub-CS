@@ -71,14 +71,21 @@ namespace ServiceHubClass
             return cat;
         }
 
-        public static List<Categoria> ObterLista()
+        public static List<Categoria> ObterLista(string busca = "")
         {
             List<Categoria> categorias = new List<Categoria>();//Cria um objeto como lista do tipo categoria
             var cmd = Banco.Abrir();
             if (cmd.Connection.State == ConnectionState.Open)
             {
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "select * from categorias order by nome";
+                if (busca != "")
+                {
+                    cmd.CommandText = $"select * from categorias where nome like '%"+busca+"%' order by nome";
+                }
+                else
+                {
+                    cmd.CommandText = "select * from categorias order by nome";
+                }
+                cmd.CommandType = CommandType.Text;              
                 var dr = cmd.ExecuteReader();
                 while (dr.Read())//Enquanto o dr.Read tiver uma proxima linha para ler ele continua
                 {

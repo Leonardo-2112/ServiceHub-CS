@@ -17,10 +17,10 @@ namespace servicehub
         {
             InitializeComponent();
         }
-        private void CarregaGrid()
+        private void CarregaGrid(string texto = "")
         {
             dgvCategorias.Rows.Clear();
-            List<Categoria> categorias = Categoria.ObterLista();//Atribui no objeto categorias todas as categorias que foram retornadas do método ObterLista
+            List<Categoria> categorias = Categoria.ObterLista(texto);//Atribui no objeto categorias todas as categorias que foram retornadas do método ObterLista
             foreach (var categoria in categorias)
             {
                 dgvCategorias.Rows.Add();
@@ -38,10 +38,23 @@ namespace servicehub
         {
             Categoria categoria = new Categoria(txtNome.Text, txtSigla.Text);
             categoria.Inserir();
-            if(categoria.Id > 0)
+            if (categoria.Id > 0)
             {
                 MessageBox.Show($"Categoria {categoria.Id} inserida com sucesso!");
                 CarregaGrid();
+            }
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text.Length > 1)
+            {
+                CarregaGrid(txtBuscar.Text);
             }
         }
     }

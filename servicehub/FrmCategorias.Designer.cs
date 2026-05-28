@@ -40,7 +40,7 @@
             txtSigla = new TextBox();
             txtID = new TextBox();
             label4 = new Label();
-            textBox1 = new TextBox();
+            txtBuscar = new TextBox();
             dgvCategorias = new DataGridView();
             clnId = new DataGridViewTextBoxColumn();
             clnNome = new DataGridViewTextBoxColumn();
@@ -98,6 +98,7 @@
             btnPesquisar.Text = "&Pesquisar";
             btnPesquisar.TextImageRelation = TextImageRelation.ImageAboveText;
             btnPesquisar.UseVisualStyleBackColor = true;
+            btnPesquisar.Click += btnPesquisar_Click;
             // 
             // btnEditar
             // 
@@ -193,13 +194,14 @@
             label4.TabIndex = 28;
             label4.Text = "Cadastro de Categoria";
             // 
-            // textBox1
+            // txtBuscar
             // 
-            textBox1.Location = new Point(114, 251);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Buscar Categoria";
-            textBox1.Size = new Size(599, 23);
-            textBox1.TabIndex = 29;
+            txtBuscar.Location = new Point(114, 251);
+            txtBuscar.Name = "txtBuscar";
+            txtBuscar.PlaceholderText = "Buscar Categoria";
+            txtBuscar.Size = new Size(599, 23);
+            txtBuscar.TabIndex = 29;
+            txtBuscar.TextChanged += textBox1_TextChanged;
             // 
             // dgvCategorias
             // 
@@ -242,7 +244,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(dgvCategorias);
-            Controls.Add(textBox1);
+            Controls.Add(txtBuscar);
             Controls.Add(label4);
             Controls.Add(btnExcluir);
             Controls.Add(btnCancelar);
@@ -277,7 +279,7 @@
         private TextBox txtSigla;
         private TextBox txtID;
         private Label label4;
-        private TextBox textBox1;
+        private TextBox txtBuscar;
         private DataGridView dgvCategorias;
         private DataGridViewTextBoxColumn clnId;
         private DataGridViewTextBoxColumn clnNome;
