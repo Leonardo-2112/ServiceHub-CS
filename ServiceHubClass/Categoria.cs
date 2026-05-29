@@ -39,6 +39,13 @@ namespace ServiceHubClass
             this.sigla = sigla;
         }
 
+        public Categoria(int id)
+        {
+            this.id = id;
+        }
+
+
+
         //Métodos (Funções) - inserir, atualizar, obterLista, obterPorId(id), excluir(id)
         public void Inserir()
         {

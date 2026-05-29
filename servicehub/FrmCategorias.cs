@@ -45,16 +45,64 @@ namespace servicehub
             }
         }
 
-        private void btnPesquisar_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             if (txtBuscar.Text.Length > 1)
             {
                 CarregaGrid(txtBuscar.Text);
+            }
+        }
+
+
+
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            Categoria cat = new Categoria(int.Parse(txtID.Text), txtNome.Text, txtSigla.Text);
+            if (cat.Atualizar())
+            {
+                txtID.Clear();
+                txtNome.Clear();
+                txtSigla.Clear();
+                CarregaGrid();
+                MessageBox.Show($"Categoria {cat.Id} alterada com sucesso! \n Lista Atualizada");
+            }
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (txtID.Text != string.Empty)
+            {
+                var resposta = MessageBox.Show($"Deseja excluir a categoria {txtID.Text}- {txtNome.Text}",
+                    $" Exclusão de Categoria",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question,
+                    MessageBoxDefaultButton.Button2
+                    );
+                if (resposta == DialogResult.Yes)
+                {
+                    Categoria cat = new(int.Parse(txtID.Text));
+                    cat.Excluir();
+                    CarregaGrid();
+                }
+
+            }
+        }
+
+        private void dgvCategorias_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            txtID.Text = dgvCategorias.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtNome.Text = dgvCategorias.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtSigla.Text = dgvCategorias.Rows[e.RowIndex].Cells[2].Value.ToString();
+        }
+
+        private void dgvCategorias_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvCategorias.CurrentRow != null)
+            {
+                txtID.Text = dgvCategorias.CurrentRow.Cells[0].Value?.ToString() ?? "";
+                txtNome.Text = dgvCategorias.CurrentRow.Cells[1].Value?.ToString() ?? "";
+                txtSigla.Text = dgvCategorias.CurrentRow.Cells[2].Value?.ToString() ?? "";
             }
         }
     }
