@@ -132,8 +132,8 @@ namespace ServiceHubClass
         public void Excluir()
         {
             var cmd = Banco.Abrir();
-            cmd.CommandType = CommandType.StoredProcedure; ;//Passa o tipo como Procedure
-            cmd.CommandText = "sp_categoria_delete"; ;//Passa o nome da Procedure do banco de dados
+            cmd.CommandType = CommandType.StoredProcedure;//Passa o tipo como Procedure
+            cmd.CommandText = "sp_categoria_delete";//Passa o nome da Procedure do banco de dados
             cmd.Parameters.AddWithValue("spid", id);//Passa os parametros para a procedure do banco de dados
             cmd.ExecuteNonQuery();//Retorna o número de linhas afetadas 
             cmd.Connection.Close();

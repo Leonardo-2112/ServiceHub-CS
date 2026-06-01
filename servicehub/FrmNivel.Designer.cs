@@ -54,12 +54,12 @@
             dgvCategorias.AllowUserToDeleteRows = false;
             dgvCategorias.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvCategorias.Columns.AddRange(new DataGridViewColumn[] { clnId, clnNome, clnSigla });
-            dgvCategorias.Location = new Point(101, 286);
+            dgvCategorias.Location = new Point(101, 270);
             dgvCategorias.Name = "dgvCategorias";
             dgvCategorias.ReadOnly = true;
             dgvCategorias.RowHeadersVisible = false;
             dgvCategorias.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvCategorias.Size = new Size(599, 150);
+            dgvCategorias.Size = new Size(599, 166);
             dgvCategorias.TabIndex = 44;
             // 
             // clnId
@@ -86,21 +86,22 @@
             // 
             // txtBuscar
             // 
-            txtBuscar.Location = new Point(101, 257);
+            txtBuscar.Location = new Point(101, 75);
             txtBuscar.Name = "txtBuscar";
             txtBuscar.PlaceholderText = "Buscar Categoria";
-            txtBuscar.Size = new Size(599, 23);
+            txtBuscar.Size = new Size(534, 23);
             txtBuscar.TabIndex = 43;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(246, 15);
+            label4.Location = new Point(283, 18);
             label4.Name = "label4";
-            label4.Size = new Size(250, 32);
+            label4.Size = new Size(203, 32);
             label4.TabIndex = 42;
-            label4.Text = "Cadastro de Categoria";
+            label4.Text = "Cadastro de Nivel";
+            label4.Click += label4_Click;
             // 
             // btnExcluir
             // 
@@ -111,7 +112,7 @@
             btnExcluir.Font = new Font("Arial Narrow", 11.25F);
             btnExcluir.ForeColor = Color.Firebrick;
             btnExcluir.Image = Properties.Resources.Delete;
-            btnExcluir.Location = new Point(421, 171);
+            btnExcluir.Location = new Point(416, 184);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(75, 57);
             btnExcluir.TabIndex = 36;
@@ -128,7 +129,7 @@
             btnCancelar.Font = new Font("Arial Narrow", 11.25F);
             btnCancelar.ForeColor = Color.Red;
             btnCancelar.Image = Properties.Resources.Cancel;
-            btnCancelar.Location = new Point(521, 171);
+            btnCancelar.Location = new Point(549, 184);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(75, 57);
             btnCancelar.TabIndex = 37;
@@ -145,12 +146,13 @@
             btnPesquisar.Font = new Font("Arial Narrow", 11.25F);
             btnPesquisar.ForeColor = Color.FromArgb(0, 192, 192);
             btnPesquisar.Image = Properties.Resources.Search;
-            btnPesquisar.Location = new Point(221, 171);
+            btnPesquisar.Location = new Point(641, 65);
             btnPesquisar.Name = "btnPesquisar";
-            btnPesquisar.Size = new Size(75, 57);
+            btnPesquisar.Size = new Size(111, 38);
             btnPesquisar.TabIndex = 34;
             btnPesquisar.Text = "&Pesquisar";
-            btnPesquisar.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnPesquisar.TextAlign = ContentAlignment.MiddleRight;
+            btnPesquisar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnPesquisar.UseVisualStyleBackColor = true;
             // 
             // btnEditar
@@ -162,7 +164,7 @@
             btnEditar.Font = new Font("Arial Narrow", 11.25F);
             btnEditar.ForeColor = Color.Goldenrod;
             btnEditar.Image = Properties.Resources.Edit;
-            btnEditar.Location = new Point(321, 171);
+            btnEditar.Location = new Point(283, 184);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(75, 57);
             btnEditar.TabIndex = 35;
@@ -179,7 +181,7 @@
             btnAdd.Font = new Font("Arial Narrow", 11.25F);
             btnAdd.ForeColor = Color.Green;
             btnAdd.Image = Properties.Resources.Add;
-            btnAdd.Location = new Point(121, 171);
+            btnAdd.Location = new Point(150, 184);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(75, 57);
             btnAdd.TabIndex = 33;
@@ -190,7 +192,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(539, 82);
+            label3.Location = new Point(558, 124);
             label3.Name = "label3";
             label3.Size = new Size(32, 15);
             label3.TabIndex = 40;
@@ -199,7 +201,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(246, 82);
+            label2.Location = new Point(265, 124);
             label2.Name = "label2";
             label2.Size = new Size(40, 15);
             label2.TabIndex = 39;
@@ -208,7 +210,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(132, 82);
+            label1.Location = new Point(151, 124);
             label1.Name = "label1";
             label1.Size = new Size(18, 15);
             label1.TabIndex = 38;
@@ -216,21 +218,21 @@
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(246, 100);
+            txtNome.Location = new Point(265, 142);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(278, 23);
             txtNome.TabIndex = 31;
             // 
             // txtSigla
             // 
-            txtSigla.Location = new Point(539, 100);
+            txtSigla.Location = new Point(558, 142);
             txtSigla.Name = "txtSigla";
             txtSigla.Size = new Size(69, 23);
             txtSigla.TabIndex = 32;
             // 
             // txtID
             // 
-            txtID.Location = new Point(132, 100);
+            txtID.Location = new Point(151, 142);
             txtID.Name = "txtID";
             txtID.ReadOnly = true;
             txtID.Size = new Size(79, 23);
