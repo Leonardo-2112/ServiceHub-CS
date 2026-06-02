@@ -44,7 +44,7 @@
             nudClasseDesconto = new NumericUpDown();
             button3 = new Button();
             btnSalvar = new Button();
-            button2 = new Button();
+            btnEditar = new Button();
             button4 = new Button();
             button5 = new Button();
             pictureBox1 = new PictureBox();
@@ -207,21 +207,22 @@
             btnSalvar.UseVisualStyleBackColor = true;
             btnSalvar.Click += btnSalvar_Click;
             // 
-            // button2
+            // btnEditar
             // 
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 255, 128);
-            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 255, 192);
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.Goldenrod;
-            button2.Image = Properties.Resources.Edit;
-            button2.Location = new Point(298, 276);
-            button2.Name = "button2";
-            button2.Size = new Size(163, 61);
-            button2.TabIndex = 18;
-            button2.Text = "&Editar";
-            button2.TextImageRelation = TextImageRelation.ImageAboveText;
-            button2.UseVisualStyleBackColor = true;
+            btnEditar.FlatAppearance.BorderSize = 0;
+            btnEditar.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 255, 128);
+            btnEditar.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 255, 192);
+            btnEditar.FlatStyle = FlatStyle.Flat;
+            btnEditar.ForeColor = Color.Goldenrod;
+            btnEditar.Image = Properties.Resources.Edit;
+            btnEditar.Location = new Point(298, 276);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(163, 61);
+            btnEditar.TabIndex = 18;
+            btnEditar.Text = "&Editar";
+            btnEditar.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click;
             // 
             // button4
             // 
@@ -283,7 +284,7 @@
             Controls.Add(pictureBox1);
             Controls.Add(button5);
             Controls.Add(button4);
-            Controls.Add(button2);
+            Controls.Add(btnEditar);
             Controls.Add(btnSalvar);
             Controls.Add(button3);
             Controls.Add(nudClasseDesconto);
@@ -330,7 +331,7 @@
         private NumericUpDown nudClasseDesconto;
         private Button button3;
         private Button btnSalvar;
-        private Button button2;
+        private Button btnEditar;
         private Button button4;
         private Button button5;
         private PictureBox pictureBox1;

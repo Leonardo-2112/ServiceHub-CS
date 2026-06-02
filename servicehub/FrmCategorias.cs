@@ -65,7 +65,7 @@ namespace servicehub
                 txtNome.Clear();
                 txtSigla.Clear();
                 CarregaGrid();
-                MessageBox.Show($"Categoria {cat.Id} alterada com sucesso! \n Lista Atualizada");
+                MessageBox.Show($"Categoria {cat.Id} alterada com sucesso! \nLista Atualizada");
             }
         }
 

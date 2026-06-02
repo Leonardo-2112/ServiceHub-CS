@@ -34,18 +34,23 @@ namespace servicehub
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            Produto produto = new Produto(txtCodBarras.Text, 
-                txtDescricao.Text, 
-                (double)nudValorUnit.Value, 
-                txtUnidadeVenda.Text, 
-                Categoria.ObterPorId(Convert.ToInt32(cmbCategoria.SelectedValue)), 
-                (double)nudEstoqueMinimo.Value, 
+            Produto produto = new Produto(txtCodBarras.Text,
+                txtDescricao.Text,
+                (double)nudValorUnit.Value,
+                txtUnidadeVenda.Text,
+                Categoria.ObterPorId(Convert.ToInt32(cmbCategoria.SelectedValue)),
+                (double)nudEstoqueMinimo.Value,
                 (double)nudClasseDesconto.Value);
             produto.Inserir();
             if (produto.Id > 0)
             {
                 MessageBox.Show($"Produto {produto.Descricao} gravado com sucesso");
             }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
