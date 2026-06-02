@@ -32,27 +32,29 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtCodBarras = new TextBox();
+            txtDescricao = new TextBox();
             label5 = new Label();
-            textBox3 = new TextBox();
+            txtUnidadeVenda = new TextBox();
             label6 = new Label();
-            numericUpDown1 = new NumericUpDown();
-            numericUpDown2 = new NumericUpDown();
-            comboBox1 = new ComboBox();
+            nudValorUnit = new NumericUpDown();
+            nudEstoqueMinimo = new NumericUpDown();
+            cmbCategoria = new ComboBox();
             label7 = new Label();
-            numericUpDown3 = new NumericUpDown();
+            nudClasseDesconto = new NumericUpDown();
             button3 = new Button();
-            button1 = new Button();
+            btnSalvar = new Button();
             button2 = new Button();
             button4 = new Button();
             button5 = new Button();
             pictureBox1 = new PictureBox();
             checkBox1 = new CheckBox();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)nudValorUnit).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudEstoqueMinimo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudClasseDesconto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -92,21 +94,21 @@
             label4.TabIndex = 3;
             label4.Text = "Categoria";
             // 
-            // textBox1
+            // txtCodBarras
             // 
-            textBox1.Location = new Point(126, 51);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Código de Barras";
-            textBox1.Size = new Size(212, 23);
-            textBox1.TabIndex = 4;
+            txtCodBarras.Location = new Point(126, 51);
+            txtCodBarras.Name = "txtCodBarras";
+            txtCodBarras.PlaceholderText = "Código de Barras";
+            txtCodBarras.Size = new Size(212, 23);
+            txtCodBarras.TabIndex = 4;
             // 
-            // textBox2
+            // txtDescricao
             // 
-            textBox2.Location = new Point(126, 87);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Descrição";
-            textBox2.Size = new Size(379, 23);
-            textBox2.TabIndex = 5;
+            txtDescricao.Location = new Point(126, 87);
+            txtDescricao.Name = "txtDescricao";
+            txtDescricao.PlaceholderText = "Descrição";
+            txtDescricao.Size = new Size(379, 23);
+            txtDescricao.TabIndex = 5;
             // 
             // label5
             // 
@@ -117,13 +119,13 @@
             label5.TabIndex = 6;
             label5.Text = "Unidade Venda";
             // 
-            // textBox3
+            // txtUnidadeVenda
             // 
-            textBox3.Location = new Point(344, 123);
-            textBox3.Name = "textBox3";
-            textBox3.PlaceholderText = "Unid. Venda";
-            textBox3.Size = new Size(161, 23);
-            textBox3.TabIndex = 7;
+            txtUnidadeVenda.Location = new Point(344, 123);
+            txtUnidadeVenda.Name = "txtUnidadeVenda";
+            txtUnidadeVenda.PlaceholderText = "Unid. Venda";
+            txtUnidadeVenda.Size = new Size(161, 23);
+            txtUnidadeVenda.TabIndex = 7;
             // 
             // label6
             // 
@@ -134,27 +136,27 @@
             label6.TabIndex = 8;
             label6.Text = "Estoque Minimo";
             // 
-            // numericUpDown1
+            // nudValorUnit
             // 
-            numericUpDown1.Location = new Point(126, 123);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(110, 23);
-            numericUpDown1.TabIndex = 9;
+            nudValorUnit.Location = new Point(126, 123);
+            nudValorUnit.Name = "nudValorUnit";
+            nudValorUnit.Size = new Size(110, 23);
+            nudValorUnit.TabIndex = 9;
             // 
-            // numericUpDown2
+            // nudEstoqueMinimo
             // 
-            numericUpDown2.Location = new Point(154, 195);
-            numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(106, 23);
-            numericUpDown2.TabIndex = 10;
+            nudEstoqueMinimo.Location = new Point(154, 195);
+            nudEstoqueMinimo.Name = "nudEstoqueMinimo";
+            nudEstoqueMinimo.Size = new Size(106, 23);
+            nudEstoqueMinimo.TabIndex = 10;
             // 
-            // comboBox1
+            // cmbCategoria
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(126, 159);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(379, 23);
-            comboBox1.TabIndex = 11;
+            cmbCategoria.FormattingEnabled = true;
+            cmbCategoria.Location = new Point(126, 159);
+            cmbCategoria.Name = "cmbCategoria";
+            cmbCategoria.Size = new Size(379, 23);
+            cmbCategoria.TabIndex = 11;
             // 
             // label7
             // 
@@ -165,12 +167,12 @@
             label7.TabIndex = 12;
             label7.Text = "Classe Desconto";
             // 
-            // numericUpDown3
+            // nudClasseDesconto
             // 
-            numericUpDown3.Location = new Point(395, 195);
-            numericUpDown3.Name = "numericUpDown3";
-            numericUpDown3.Size = new Size(110, 23);
-            numericUpDown3.TabIndex = 13;
+            nudClasseDesconto.Location = new Point(395, 195);
+            nudClasseDesconto.Name = "nudClasseDesconto";
+            nudClasseDesconto.Size = new Size(110, 23);
+            nudClasseDesconto.TabIndex = 13;
             // 
             // button3
             // 
@@ -180,7 +182,7 @@
             button3.FlatStyle = FlatStyle.Flat;
             button3.ForeColor = Color.Firebrick;
             button3.Image = Properties.Resources.Cancel;
-            button3.Location = new Point(489, 311);
+            button3.Location = new Point(503, 276);
             button3.Name = "button3";
             button3.Size = new Size(163, 61);
             button3.TabIndex = 16;
@@ -188,21 +190,22 @@
             button3.TextImageRelation = TextImageRelation.ImageAboveText;
             button3.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnSalvar
             // 
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(128, 255, 128);
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.Green;
-            button1.Image = Properties.Resources.Down;
-            button1.Location = new Point(73, 311);
-            button1.Name = "button1";
-            button1.Size = new Size(163, 61);
-            button1.TabIndex = 17;
-            button1.Text = "&Salvar";
-            button1.TextImageRelation = TextImageRelation.ImageAboveText;
-            button1.UseVisualStyleBackColor = true;
+            btnSalvar.FlatAppearance.BorderSize = 0;
+            btnSalvar.FlatAppearance.MouseDownBackColor = Color.FromArgb(128, 255, 128);
+            btnSalvar.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
+            btnSalvar.FlatStyle = FlatStyle.Flat;
+            btnSalvar.ForeColor = Color.Green;
+            btnSalvar.Image = Properties.Resources.Down;
+            btnSalvar.Location = new Point(87, 276);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.Size = new Size(163, 61);
+            btnSalvar.TabIndex = 17;
+            btnSalvar.Text = "&Salvar";
+            btnSalvar.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnSalvar.UseVisualStyleBackColor = true;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // button2
             // 
@@ -212,7 +215,7 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.ForeColor = Color.Goldenrod;
             button2.Image = Properties.Resources.Edit;
-            button2.Location = new Point(284, 311);
+            button2.Location = new Point(298, 276);
             button2.Name = "button2";
             button2.Size = new Size(163, 61);
             button2.TabIndex = 18;
@@ -262,28 +265,37 @@
             checkBox1.Text = "Descontinuado";
             checkBox1.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(54, 356);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(632, 150);
+            dataGridView1.TabIndex = 23;
+            // 
             // FrmProduto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 518);
+            Controls.Add(dataGridView1);
             Controls.Add(checkBox1);
             Controls.Add(pictureBox1);
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnSalvar);
             Controls.Add(button3);
-            Controls.Add(numericUpDown3);
+            Controls.Add(nudClasseDesconto);
             Controls.Add(label7);
-            Controls.Add(comboBox1);
-            Controls.Add(numericUpDown2);
-            Controls.Add(numericUpDown1);
+            Controls.Add(cmbCategoria);
+            Controls.Add(nudEstoqueMinimo);
+            Controls.Add(nudValorUnit);
             Controls.Add(label6);
-            Controls.Add(textBox3);
+            Controls.Add(txtUnidadeVenda);
             Controls.Add(label5);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtDescricao);
+            Controls.Add(txtCodBarras);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -291,10 +303,11 @@
             Name = "FrmProduto";
             Text = "FrmProduto";
             Load += FrmProduto_Load;
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudValorUnit).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudEstoqueMinimo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudClasseDesconto).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -305,22 +318,23 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtCodBarras;
+        private TextBox txtDescricao;
         private Label label5;
-        private TextBox textBox3;
+        private TextBox txtUnidadeVenda;
         private Label label6;
-        private NumericUpDown numericUpDown1;
-        private NumericUpDown numericUpDown2;
-        private ComboBox comboBox1;
+        private NumericUpDown nudValorUnit;
+        private NumericUpDown nudEstoqueMinimo;
+        private ComboBox cmbCategoria;
         private Label label7;
-        private NumericUpDown numericUpDown3;
+        private NumericUpDown nudClasseDesconto;
         private Button button3;
-        private Button button1;
+        private Button btnSalvar;
         private Button button2;
         private Button button4;
         private Button button5;
         private PictureBox pictureBox1;
         private CheckBox checkBox1;
+        private DataGridView dataGridView1;
     }
 }
