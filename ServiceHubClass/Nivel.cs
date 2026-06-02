@@ -22,7 +22,7 @@ namespace ServiceHubClass
         public string? Sigla { get => sigla; set => sigla = value; }
 
         //Construtores
-        public Nivel() 
+        public Nivel()
         {
 
         }
@@ -43,7 +43,7 @@ namespace ServiceHubClass
             this.nome = nome;
             this.sigla = sigla;
         }
-        public Nivel(int id) 
+        public Nivel(int id)
         {
             this.id = id;
         }
@@ -89,18 +89,18 @@ namespace ServiceHubClass
                 {
                     cmd.CommandText = $"select * from niveis where nome like '%{busca}%' order by nome";
                 }
-                else 
+                else
                 {
                     cmd.CommandText = $"select * from niveis order by nome";
                 }
                 cmd.CommandType = CommandType.Text;
                 var dr = cmd.ExecuteReader();
-                while (dr.Read()) 
-                { 
-                    niveis.Add(new(dr.GetInt32(0), dr.GetString(1), dr.GetString(2)))
+                while (dr.Read())
+                {
+                    niveis.Add(new(dr.GetInt32(0), dr.GetString(1), dr.GetString(2)));
                 }
                 dr.Close();
-                cmd.Connection.Close();                
+                cmd.Connection.Close();
             }
             return niveis;
         }
@@ -114,7 +114,7 @@ namespace ServiceHubClass
             }
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = $"update niveis set nome = nome, sigla = sigla where id = id;";
+            cmd.CommandText = $"update niveis set nome = nome, sigla = sigla where id = {id}";
             cmd.Parameters.AddWithValue("id", Id);
             cmd.Parameters.AddWithValue("nome", Nome);
             cmd.Parameters.AddWithValue("nome", Nome);
@@ -125,6 +125,17 @@ namespace ServiceHubClass
             cmd.Connection.Close();
             return atualizada;
 
+        }
+    
+
+    public void Excluir()
+        {
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = $"DELETE FROM niveis WHERE id = {id}";
+            cmd.Parameters.AddWithValue ("id", Id);
+            cmd.ExecuteNonQuery();
+            cmd.Connection.Close();
         }
     }
 }
