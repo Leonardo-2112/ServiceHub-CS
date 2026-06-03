@@ -105,5 +105,10 @@ namespace servicehub
                 txtSigla.Text = dgvCategorias.CurrentRow.Cells[2].Value?.ToString() ?? "";
             }
         }
+
+        private void dgvCategorias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

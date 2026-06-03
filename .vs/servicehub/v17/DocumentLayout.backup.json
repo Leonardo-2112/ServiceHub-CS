@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\leonardo.asousa4\\source\\repos\\servicehub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{202BA11A-983A-418B-9F0B-712A1F8DB5C7}|ServiceHubClass\\ServiceHubClass.csproj|c:\\users\\leonardo.asousa4\\source\\repos\\servicehub\\servicehubclass\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{202BA11A-983A-418B-9F0B-712A1F8DB5C7}|ServiceHubClass\\ServiceHubClass.csproj|solutionrelative:servicehubclass\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E8176861-99D2-48B6-A5C9-0AC18BCE5511}|servicehub\\servicehub.csproj|c:\\users\\leonardo.asousa4\\source\\repos\\servicehub\\servicehub\\frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8176861-99D2-48B6-A5C9-0AC18BCE5511}|servicehub\\servicehub.csproj|solutionrelative:servicehub\\frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8176861-99D2-48B6-A5C9-0AC18BCE5511}|servicehub\\servicehub.csproj|c:\\users\\leonardo.asousa4\\source\\repos\\servicehub\\servicehub\\frmproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8176861-99D2-48B6-A5C9-0AC18BCE5511}|servicehub\\servicehub.csproj|solutionrelative:servicehub\\frmproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E8176861-99D2-48B6-A5C9-0AC18BCE5511}|servicehub\\servicehub.csproj|c:\\users\\leonardo.asousa4\\source\\repos\\servicehub\\servicehub\\frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E8176861-99D2-48B6-A5C9-0AC18BCE5511}|servicehub\\servicehub.csproj|solutionrelative:servicehub\\frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8176861-99D2-48B6-A5C9-0AC18BCE5511}|servicehub\\servicehub.csproj|c:\\users\\leonardo.asousa4\\source\\repos\\servicehub\\servicehub\\frmproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E8176861-99D2-48B6-A5C9-0AC18BCE5511}|servicehub\\servicehub.csproj|solutionrelative:servicehub\\frmproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{E8176861-99D2-48B6-A5C9-0AC18BCE5511}|servicehub\\servicehub.csproj|c:\\users\\leonardo.asousa4\\source\\repos\\servicehub\\servicehub\\frmcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E8176861-99D2-48B6-A5C9-0AC18BCE5511}|servicehub\\servicehub.csproj|solutionrelative:servicehub\\frmcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8176861-99D2-48B6-A5C9-0AC18BCE5511}|servicehub\\servicehub.csproj|c:\\users\\leonardo.asousa4\\source\\repos\\servicehub\\servicehub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8176861-99D2-48B6-A5C9-0AC18BCE5511}|servicehub\\servicehub.csproj|solutionrelative:servicehub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8176861-99D2-48B6-A5C9-0AC18BCE5511}|servicehub\\servicehub.csproj|c:\\users\\leonardo.asousa4\\source\\repos\\servicehub\\servicehub\\frmcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8176861-99D2-48B6-A5C9-0AC18BCE5511}|servicehub\\servicehub.csproj|solutionrelative:servicehub\\frmcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{202BA11A-983A-418B-9F0B-712A1F8DB5C7}|ServiceHubClass\\ServiceHubClass.csproj|c:\\users\\leonardo.asousa4\\source\\repos\\servicehub\\servicehubclass\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{202BA11A-983A-418B-9F0B-712A1F8DB5C7}|ServiceHubClass\\ServiceHubClass.csproj|solutionrelative:servicehubclass\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 251,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,40 +46,78 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FrmProduto.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\leonardo.asousa4\\source\\repos\\servicehub\\servicehub\\FrmProduto.cs",
-              "RelativeDocumentMoniker": "servicehub\\FrmProduto.cs",
-              "ToolTip": "C:\\Users\\leonardo.asousa4\\source\\repos\\servicehub\\servicehub\\FrmProduto.cs [Projeto]",
-              "RelativeToolTip": "servicehub\\FrmProduto.cs [Projeto]",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\leonardo.asousa4\\source\\repos\\servicehub\\servicehub\\Program.cs",
+              "RelativeDocumentMoniker": "servicehub\\Program.cs",
+              "ToolTip": "C:\\Users\\leonardo.asousa4\\source\\repos\\servicehub\\servicehub\\Program.cs",
+              "RelativeToolTip": "servicehub\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-02T19:14:50.483Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FrmProduto.cs",
-              "DocumentMoniker": "C:\\Users\\leonardo.asousa4\\source\\repos\\servicehub\\servicehub\\FrmProduto.cs",
-              "RelativeDocumentMoniker": "servicehub\\FrmProduto.cs",
-              "ToolTip": "C:\\Users\\leonardo.asousa4\\source\\repos\\servicehub\\servicehub\\FrmProduto.cs",
-              "RelativeToolTip": "servicehub\\FrmProduto.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAnwC4AAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-02T18:53:19.292Z",
+              "WhenOpened": "2026-06-03T19:25:36.657Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Produto.cs",
-              "DocumentMoniker": "C:\\Users\\leonardo.asousa4\\source\\repos\\servicehub\\ServiceHubClass\\Produto.cs",
-              "RelativeDocumentMoniker": "ServiceHubClass\\Produto.cs",
-              "ToolTip": "C:\\Users\\leonardo.asousa4\\source\\repos\\servicehub\\ServiceHubClass\\Produto.cs*",
-              "RelativeToolTip": "ServiceHubClass\\Produto.cs*",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAhwKoAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "FrmCategorias.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\leonardo.asousa4\\source\\repos\\servicehub\\servicehub\\FrmCategorias.cs",
+              "RelativeDocumentMoniker": "servicehub\\FrmCategorias.cs",
+              "ToolTip": "C:\\Users\\leonardo.asousa4\\source\\repos\\servicehub\\servicehub\\FrmCategorias.cs [Projeto]",
+              "RelativeToolTip": "servicehub\\FrmCategorias.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-02T19:04:57.06Z",
+              "WhenOpened": "2026-06-03T19:23:30.474Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FrmCategorias.cs",
+              "DocumentMoniker": "C:\\Users\\leonardo.asousa4\\source\\repos\\servicehub\\servicehub\\FrmCategorias.cs",
+              "RelativeDocumentMoniker": "servicehub\\FrmCategorias.cs",
+              "ToolTip": "C:\\Users\\leonardo.asousa4\\source\\repos\\servicehub\\servicehub\\FrmCategorias.cs",
+              "RelativeToolTip": "servicehub\\FrmCategorias.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAowCIAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T19:22:57.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmUsuario.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\leonardo.asousa4\\source\\repos\\servicehub\\servicehub\\FrmUsuario.cs",
+              "RelativeDocumentMoniker": "servicehub\\FrmUsuario.cs",
+              "ToolTip": "C:\\Users\\leonardo.asousa4\\source\\repos\\servicehub\\servicehub\\FrmUsuario.cs [Projeto]",
+              "RelativeToolTip": "servicehub\\FrmUsuario.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T19:22:26.6Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FrmUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\leonardo.asousa4\\source\\repos\\servicehub\\servicehub\\FrmUsuario.cs",
+              "RelativeDocumentMoniker": "servicehub\\FrmUsuario.cs",
+              "ToolTip": "C:\\Users\\leonardo.asousa4\\source\\repos\\servicehub\\servicehub\\FrmUsuario.cs",
+              "RelativeToolTip": "servicehub\\FrmUsuario.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAswFAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T19:16:35.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\leonardo.asousa4\\source\\repos\\servicehub\\ServiceHubClass\\Usuario.cs",
+              "RelativeDocumentMoniker": "ServiceHubClass\\Usuario.cs",
+              "ToolTip": "C:\\Users\\leonardo.asousa4\\source\\repos\\servicehub\\ServiceHubClass\\Usuario.cs",
+              "RelativeToolTip": "ServiceHubClass\\Usuario.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAAA2wJQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T19:15:59.082Z",
               "EditorCaption": ""
             }
           ]

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("servicehub")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+897cbe49cc2e10cf15243e3a91049f4eba4f2521")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a5abc14974530c57195711cfc27ddd02aa979f35")]
 [assembly: System.Reflection.AssemblyProductAttribute("servicehub")]
 [assembly: System.Reflection.AssemblyTitleAttribute("servicehub")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

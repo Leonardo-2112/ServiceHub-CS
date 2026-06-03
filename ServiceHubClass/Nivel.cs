@@ -9,7 +9,7 @@ using System.Data;
 
 namespace ServiceHubClass
 {
-    internal class Nivel
+    public class Nivel
     {
         //Atributos
         private int id;
@@ -68,7 +68,7 @@ namespace ServiceHubClass
             Nivel nivel = new Nivel();
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = $"select * from niveis where id {id}";
+            cmd.CommandText = $"select * from niveis where id = {id}";
             var dr = cmd.ExecuteReader();
             if (dr.Read())
             {

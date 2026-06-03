@@ -26,7 +26,7 @@ namespace servicehub
         private void FrmProduto_Load(object sender, EventArgs e)
         {
             cmbCategoria.DataSource = Categoria.ObterLista();
-            cmbCategoria.DisplayMember = "Name";
+            cmbCategoria.DisplayMember = "Nome";
             cmbCategoria.ValueMember = "Id";
 
             dataGridView1.DataSource = Produto.ObterLista();
