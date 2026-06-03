@@ -19,14 +19,14 @@ namespace servicehub
         }
         private void CarregaGrid(string texto = "")
         {
-            dgvCategorias.Rows.Clear();
-            List<Categoria> categorias = Categoria.ObterLista(texto);//Atribui no objeto categorias todas as categorias que foram retornadas do método ObterLista
-            foreach (var categoria in categorias)
+            dgvNiveis.Rows.Clear();
+            List<Nivel> niveis = Nivel.ObterLista(texto);//Atribui no objeto categorias todas as categorias que foram retornadas do método ObterLista
+            foreach (var nivel in niveis)
             {
-                dgvCategorias.Rows.Add();
-                dgvCategorias.Rows[dgvCategorias.Rows.Count - 1].Cells[0].Value = categoria.Id;
-                dgvCategorias.Rows[dgvCategorias.Rows.Count - 1].Cells[1].Value = categoria.Nome;
-                dgvCategorias.Rows[dgvCategorias.Rows.Count - 1].Cells[2].Value = categoria.Sigla;
+                dgvNiveis.Rows.Add();
+                dgvNiveis.Rows[dgvNiveis.Rows.Count - 1].Cells[0].Value = nivel.Id;
+                dgvNiveis.Rows[dgvNiveis.Rows.Count - 1].Cells[1].Value = nivel.Nome;
+                dgvNiveis.Rows[dgvNiveis.Rows.Count - 1].Cells[2].Value = nivel.Sigla;
             }
         }
 
@@ -42,9 +42,56 @@ namespace servicehub
             nivel.Inserir();
             if (nivel.Id > 0)
             {
-                MessageBox.Show($"Categoria {nivel.Id} inserida com sucesso!");
+                MessageBox.Show($"NIvel {nivel.Id} inserido com sucesso!");
                 CarregaGrid();
             }
+        }
+
+
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            Nivel nivel = new Nivel(int.Parse(txtID.Text), txtNome.Text, txtSigla.Text);
+            if (nivel.Atualizar())
+            {
+                txtID.Clear();
+                txtNome.Clear();
+                txtSigla.Clear();
+                CarregaGrid();
+                MessageBox.Show($"Nivel {nivel.Id}- {nivel.Nome} alterado com sucesso! \nLista Atualizada");
+            }
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (txtID.Text != string.Empty)
+            {
+                var resposta = MessageBox.Show($"Deseja excluir o Nivel {txtID.Text}- {txtNome.Text}",
+                    $" Exclusão de Nivel",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question,
+                    MessageBoxDefaultButton.Button2
+                    );
+                if (resposta == DialogResult.Yes)
+                {
+                    Nivel nivel = new(int.Parse(txtID.Text));
+                    nivel.Excluir();
+                    CarregaGrid();
+                }
+
+            }
+        }
+
+        private void dgvNiveis_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            txtID.Text = dgvNiveis.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtNome.Text = dgvNiveis.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtSigla.Text = dgvNiveis.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
     }
 }

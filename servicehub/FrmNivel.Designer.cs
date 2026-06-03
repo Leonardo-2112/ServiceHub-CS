@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dgvCategorias = new DataGridView();
+            dgvNiveis = new DataGridView();
             clnId = new DataGridViewTextBoxColumn();
             clnNome = new DataGridViewTextBoxColumn();
             clnSigla = new DataGridViewTextBoxColumn();
@@ -45,22 +45,23 @@
             txtNome = new TextBox();
             txtSigla = new TextBox();
             txtID = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)dgvCategorias).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvNiveis).BeginInit();
             SuspendLayout();
             // 
-            // dgvCategorias
+            // dgvNiveis
             // 
-            dgvCategorias.AllowUserToAddRows = false;
-            dgvCategorias.AllowUserToDeleteRows = false;
-            dgvCategorias.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCategorias.Columns.AddRange(new DataGridViewColumn[] { clnId, clnNome, clnSigla });
-            dgvCategorias.Location = new Point(101, 270);
-            dgvCategorias.Name = "dgvCategorias";
-            dgvCategorias.ReadOnly = true;
-            dgvCategorias.RowHeadersVisible = false;
-            dgvCategorias.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvCategorias.Size = new Size(599, 166);
-            dgvCategorias.TabIndex = 44;
+            dgvNiveis.AllowUserToAddRows = false;
+            dgvNiveis.AllowUserToDeleteRows = false;
+            dgvNiveis.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvNiveis.Columns.AddRange(new DataGridViewColumn[] { clnId, clnNome, clnSigla });
+            dgvNiveis.Location = new Point(101, 270);
+            dgvNiveis.Name = "dgvNiveis";
+            dgvNiveis.ReadOnly = true;
+            dgvNiveis.RowHeadersVisible = false;
+            dgvNiveis.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvNiveis.Size = new Size(599, 166);
+            dgvNiveis.TabIndex = 44;
+            dgvNiveis.CellClick += dgvNiveis_CellClick_1;
             // 
             // clnId
             // 
@@ -118,6 +119,7 @@
             btnExcluir.Text = "E&xcluir";
             btnExcluir.TextImageRelation = TextImageRelation.ImageAboveText;
             btnExcluir.UseVisualStyleBackColor = true;
+            btnExcluir.Click += btnExcluir_Click;
             // 
             // btnCancelar
             // 
@@ -153,6 +155,7 @@
             btnPesquisar.TextAlign = ContentAlignment.MiddleRight;
             btnPesquisar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnPesquisar.UseVisualStyleBackColor = true;
+            btnPesquisar.Click += btnPesquisar_Click;
             // 
             // btnEditar
             // 
@@ -170,6 +173,7 @@
             btnEditar.Text = "&Editar";
             btnEditar.TextImageRelation = TextImageRelation.ImageAboveText;
             btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnAdd
             // 
@@ -243,7 +247,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(dgvCategorias);
+            Controls.Add(dgvNiveis);
             Controls.Add(txtBuscar);
             Controls.Add(label4);
             Controls.Add(btnExcluir);
@@ -260,14 +264,14 @@
             Name = "FrmNivel";
             Text = "FrmNivel";
             Load += FrmNivel_Load;
-            ((System.ComponentModel.ISupportInitialize)dgvCategorias).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvNiveis).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dgvCategorias;
+        private DataGridView dgvNiveis;
         private DataGridViewTextBoxColumn clnId;
         private DataGridViewTextBoxColumn clnNome;
         private DataGridViewTextBoxColumn clnSigla;

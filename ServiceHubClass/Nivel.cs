@@ -117,7 +117,7 @@ namespace ServiceHubClass
             cmd.CommandText = $"update niveis set nome = nome, sigla = sigla where id = {id}";
             cmd.Parameters.AddWithValue("id", Id);
             cmd.Parameters.AddWithValue("nome", Nome);
-            cmd.Parameters.AddWithValue("nome", Nome);
+            cmd.Parameters.AddWithValue("sigla", Sigla);
             if (cmd.ExecuteNonQuery() > 0)
             {
                 atualizada = true;
