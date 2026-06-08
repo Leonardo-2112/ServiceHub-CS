@@ -1,6 +1,6 @@
 ﻿namespace servicehub
 {
-    partial class FrmUsuario
+    partial class FrmCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dgvUsuarios = new DataGridView();
+            label6 = new Label();
+            label5 = new Label();
+            txtCpf = new TextBox();
+            dgvClientes = new DataGridView();
             txtBuscar = new TextBox();
+            btnExcluir = new Button();
+            button1 = new Button();
             btnCancelar = new Button();
             btnPesquisar = new Button();
             btnEditar = new Button();
@@ -40,36 +45,95 @@
             txtNome = new TextBox();
             txtEmail = new TextBox();
             txtId = new TextBox();
-            button1 = new Button();
-            buttonExcluir = new Button();
-            txtSenha = new TextBox();
-            label5 = new Label();
-            label6 = new Label();
-            cmbNivel = new ComboBox();
-            ((System.ComponentModel.ISupportInitialize)dgvUsuarios).BeginInit();
+            txtDataNasc = new TextBox();
+            label4 = new Label();
+            txtTelefone = new TextBox();
+            checkBox1 = new CheckBox();
+            ((System.ComponentModel.ISupportInitialize)dgvClientes).BeginInit();
             SuspendLayout();
             // 
-            // dgvUsuarios
+            // label6
             // 
-            dgvUsuarios.AllowUserToAddRows = false;
-            dgvUsuarios.AllowUserToDeleteRows = false;
-            dgvUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvUsuarios.Location = new Point(75, 257);
-            dgvUsuarios.Name = "dgvUsuarios";
-            dgvUsuarios.ReadOnly = true;
-            dgvUsuarios.RowHeadersVisible = false;
-            dgvUsuarios.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvUsuarios.Size = new Size(599, 166);
-            dgvUsuarios.TabIndex = 58;
-            dgvUsuarios.CellClick += dgvUsuarios_CellClick;
+            label6.AutoSize = true;
+            label6.Location = new Point(101, 80);
+            label6.Name = "label6";
+            label6.Size = new Size(98, 15);
+            label6.TabIndex = 83;
+            label6.Text = "Data Nascimento";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(284, 80);
+            label5.Name = "label5";
+            label5.Size = new Size(28, 15);
+            label5.TabIndex = 82;
+            label5.Text = "CPF";
+            // 
+            // txtCpf
+            // 
+            txtCpf.Location = new Point(284, 98);
+            txtCpf.Name = "txtCpf";
+            txtCpf.Size = new Size(239, 23);
+            txtCpf.TabIndex = 81;
+            // 
+            // dgvClientes
+            // 
+            dgvClientes.AllowUserToAddRows = false;
+            dgvClientes.AllowUserToDeleteRows = false;
+            dgvClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvClientes.Location = new Point(101, 311);
+            dgvClientes.Name = "dgvClientes";
+            dgvClientes.ReadOnly = true;
+            dgvClientes.RowHeadersVisible = false;
+            dgvClientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvClientes.Size = new Size(543, 166);
+            dgvClientes.TabIndex = 80;
+            dgvClientes.CellClick += dgvClientes_CellClick;
             // 
             // txtBuscar
             // 
-            txtBuscar.Location = new Point(75, 153);
+            txtBuscar.Location = new Point(101, 207);
             txtBuscar.Name = "txtBuscar";
             txtBuscar.PlaceholderText = "Buscar Usuario";
             txtBuscar.Size = new Size(412, 23);
-            txtBuscar.TabIndex = 57;
+            txtBuscar.TabIndex = 79;
+            // 
+            // btnExcluir
+            // 
+            btnExcluir.FlatAppearance.BorderSize = 0;
+            btnExcluir.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 128, 128);
+            btnExcluir.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 192, 192);
+            btnExcluir.FlatStyle = FlatStyle.Flat;
+            btnExcluir.Font = new Font("Arial Narrow", 11.25F);
+            btnExcluir.ForeColor = Color.Firebrick;
+            btnExcluir.Image = Properties.Resources.Delete;
+            btnExcluir.Location = new Point(405, 248);
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.Size = new Size(75, 57);
+            btnExcluir.TabIndex = 72;
+            btnExcluir.Text = "E&xcluir";
+            btnExcluir.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnExcluir.UseVisualStyleBackColor = true;
+            btnExcluir.Click += btnExcluir_Click;
+            // 
+            // button1
+            // 
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 128, 128);
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 192, 192);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Arial Narrow", 11.25F);
+            button1.ForeColor = Color.Red;
+            button1.Image = Properties.Resources.Cancel;
+            button1.Location = new Point(569, 248);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 57);
+            button1.TabIndex = 74;
+            button1.Text = "&Cancelar";
+            button1.TextImageRelation = TextImageRelation.ImageAboveText;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // btnCancelar
             // 
@@ -80,10 +144,10 @@
             btnCancelar.Font = new Font("Arial Narrow", 11.25F);
             btnCancelar.ForeColor = Color.Red;
             btnCancelar.Image = Properties.Resources.Cancel;
-            btnCancelar.Location = new Point(543, 194);
+            btnCancelar.Location = new Point(569, 248);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(75, 57);
-            btnCancelar.TabIndex = 51;
+            btnCancelar.TabIndex = 73;
             btnCancelar.Text = "&Cancelar";
             btnCancelar.TextImageRelation = TextImageRelation.ImageAboveText;
             btnCancelar.UseVisualStyleBackColor = true;
@@ -97,10 +161,10 @@
             btnPesquisar.Font = new Font("Arial Narrow", 11.25F);
             btnPesquisar.ForeColor = Color.FromArgb(0, 192, 192);
             btnPesquisar.Image = Properties.Resources.Search;
-            btnPesquisar.Location = new Point(507, 143);
+            btnPesquisar.Location = new Point(533, 197);
             btnPesquisar.Name = "btnPesquisar";
             btnPesquisar.Size = new Size(111, 38);
-            btnPesquisar.TabIndex = 48;
+            btnPesquisar.TabIndex = 69;
             btnPesquisar.Text = "&Pesquisar";
             btnPesquisar.TextAlign = ContentAlignment.MiddleRight;
             btnPesquisar.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -116,10 +180,10 @@
             btnEditar.Font = new Font("Arial Narrow", 11.25F);
             btnEditar.ForeColor = Color.Goldenrod;
             btnEditar.Image = Properties.Resources.Edit;
-            btnEditar.Location = new Point(231, 194);
+            btnEditar.Location = new Point(257, 248);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(75, 57);
-            btnEditar.TabIndex = 49;
+            btnEditar.TabIndex = 70;
             btnEditar.Text = "&Editar";
             btnEditar.TextImageRelation = TextImageRelation.ImageAboveText;
             btnEditar.UseVisualStyleBackColor = true;
@@ -134,10 +198,10 @@
             btnAdd.Font = new Font("Arial Narrow", 11.25F);
             btnAdd.ForeColor = Color.Green;
             btnAdd.Image = Properties.Resources.Add;
-            btnAdd.Location = new Point(75, 194);
+            btnAdd.Location = new Point(101, 248);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(75, 57);
-            btnAdd.TabIndex = 47;
+            btnAdd.TabIndex = 68;
             btnAdd.Text = "&Adicionar";
             btnAdd.TextImageRelation = TextImageRelation.ImageAboveText;
             btnAdd.UseVisualStyleBackColor = true;
@@ -146,133 +210,100 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(75, 71);
+            label3.Location = new Point(101, 138);
             label3.Name = "label3";
             label3.Size = new Size(36, 15);
-            label3.TabIndex = 54;
+            label3.TabIndex = 77;
             label3.Text = "Email";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(209, 9);
+            label2.Location = new Point(235, 18);
             label2.Name = "label2";
             label2.Size = new Size(40, 15);
-            label2.TabIndex = 53;
+            label2.TabIndex = 76;
             label2.Text = "Nome";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(75, 9);
+            label1.Location = new Point(101, 18);
             label1.Name = "label1";
             label1.Size = new Size(18, 15);
-            label1.TabIndex = 52;
+            label1.TabIndex = 75;
             label1.Text = "ID";
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(209, 27);
+            txtNome.Location = new Point(235, 36);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(245, 23);
-            txtNome.TabIndex = 45;
+            txtNome.Size = new Size(278, 23);
+            txtNome.TabIndex = 66;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(75, 89);
+            txtEmail.Location = new Point(101, 156);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(240, 23);
-            txtEmail.TabIndex = 46;
+            txtEmail.TabIndex = 67;
             // 
             // txtId
             // 
-            txtId.Location = new Point(75, 27);
+            txtId.Location = new Point(101, 36);
             txtId.Name = "txtId";
             txtId.ReadOnly = true;
             txtId.Size = new Size(79, 23);
-            txtId.TabIndex = 55;
+            txtId.TabIndex = 78;
             // 
-            // button1
+            // txtDataNasc
             // 
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 128, 128);
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 192, 192);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Arial Narrow", 11.25F);
-            button1.ForeColor = Color.Red;
-            button1.Image = Properties.Resources.Cancel;
-            button1.Location = new Point(543, 194);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 57);
-            button1.TabIndex = 51;
-            button1.Text = "&Cancelar";
-            button1.TextImageRelation = TextImageRelation.ImageAboveText;
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            txtDataNasc.Location = new Point(101, 98);
+            txtDataNasc.Name = "txtDataNasc";
+            txtDataNasc.Size = new Size(131, 23);
+            txtDataNasc.TabIndex = 85;
             // 
-            // buttonExcluir
+            // label4
             // 
-            buttonExcluir.FlatAppearance.BorderSize = 0;
-            buttonExcluir.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 128, 128);
-            buttonExcluir.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 192, 192);
-            buttonExcluir.FlatStyle = FlatStyle.Flat;
-            buttonExcluir.Font = new Font("Arial Narrow", 11.25F);
-            buttonExcluir.ForeColor = Color.Firebrick;
-            buttonExcluir.Image = Properties.Resources.Delete;
-            buttonExcluir.Location = new Point(393, 194);
-            buttonExcluir.Name = "buttonExcluir";
-            buttonExcluir.Size = new Size(75, 57);
-            buttonExcluir.TabIndex = 50;
-            buttonExcluir.Text = "E&xcluir";
-            buttonExcluir.TextImageRelation = TextImageRelation.ImageAboveText;
-            buttonExcluir.UseVisualStyleBackColor = true;
-            buttonExcluir.Click += buttonExcluir_Click;
+            label4.AutoSize = true;
+            label4.Location = new Point(377, 138);
+            label4.Name = "label4";
+            label4.Size = new Size(52, 15);
+            label4.TabIndex = 87;
+            label4.Text = "Telefone";
             // 
-            // txtSenha
+            // txtTelefone
             // 
-            txtSenha.Location = new Point(379, 89);
-            txtSenha.Name = "txtSenha";
-            txtSenha.Size = new Size(239, 23);
-            txtSenha.TabIndex = 61;
+            txtTelefone.Location = new Point(377, 156);
+            txtTelefone.Name = "txtTelefone";
+            txtTelefone.Size = new Size(240, 23);
+            txtTelefone.TabIndex = 86;
             // 
-            // label5
+            // checkBox1
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(379, 71);
-            label5.Name = "label5";
-            label5.Size = new Size(39, 15);
-            label5.TabIndex = 62;
-            label5.Text = "Senha";
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(563, 100);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(54, 19);
+            checkBox1.TabIndex = 88;
+            checkBox1.Text = "Ativo";
+            checkBox1.UseVisualStyleBackColor = true;
             // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(498, 9);
-            label6.Name = "label6";
-            label6.Size = new Size(34, 15);
-            label6.TabIndex = 64;
-            label6.Text = "Nivel";
-            // 
-            // cmbNivel
-            // 
-            cmbNivel.FormattingEnabled = true;
-            cmbNivel.Location = new Point(498, 27);
-            cmbNivel.Name = "cmbNivel";
-            cmbNivel.Size = new Size(121, 23);
-            cmbNivel.TabIndex = 65;
-            // 
-            // FrmUsuario
+            // FrmCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(cmbNivel);
+            ClientSize = new Size(800, 620);
+            Controls.Add(checkBox1);
+            Controls.Add(label4);
+            Controls.Add(txtTelefone);
+            Controls.Add(txtDataNasc);
             Controls.Add(label6);
             Controls.Add(label5);
-            Controls.Add(txtSenha);
-            Controls.Add(dgvUsuarios);
+            Controls.Add(txtCpf);
+            Controls.Add(dgvClientes);
             Controls.Add(txtBuscar);
-            Controls.Add(buttonExcluir);
+            Controls.Add(btnExcluir);
             Controls.Add(button1);
             Controls.Add(btnCancelar);
             Controls.Add(btnPesquisar);
@@ -284,18 +315,22 @@
             Controls.Add(txtNome);
             Controls.Add(txtEmail);
             Controls.Add(txtId);
-            Name = "FrmUsuario";
-            Text = "FrmUsuario";
-            Load += FrmUsuario_Load;
-            ((System.ComponentModel.ISupportInitialize)dgvUsuarios).EndInit();
+            Name = "FrmCliente";
+            Text = "FrmCliente";
+            Load += FrmCliente_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvClientes).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private DataGridView dgvUsuarios;
+        private Label label6;
+        private Label label5;
+        private TextBox txtCpf;
+        private DataGridView dgvClientes;
         private TextBox txtBuscar;
+        private Button btnExcluir;
+        private Button button1;
         private Button btnCancelar;
         private Button btnPesquisar;
         private Button btnEditar;
@@ -306,11 +341,9 @@
         private TextBox txtNome;
         private TextBox txtEmail;
         private TextBox txtId;
-        private Button button1;
-        private Button buttonExcluir;
-        private TextBox txtSenha;
-        private Label label5;
-        private Label label6;
-        private ComboBox cmbNivel;
+        private TextBox txtDataNasc;
+        private Label label4;
+        private TextBox txtTelefone;
+        private CheckBox checkBox1;
     }
 }

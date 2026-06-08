@@ -123,3 +123,4 @@ C:\Users\leonardo.asousa4\source\repos\servicehub\servicehub\obj\Debug\net8.0-wi
 C:\Users\leonardo.asousa4\source\repos\servicehub\servicehub\obj\Debug\net8.0-windows\ref\servicehub.dll
 C:\Users\leonardo.asousa4\source\repos\servicehub\servicehub\obj\Debug\net8.0-windows\servicehub.FrmNivel.resources
 C:\Users\leonardo.asousa4\source\repos\servicehub\servicehub\obj\Debug\net8.0-windows\servicehub.FrmUsuario.resources
+C:\Users\leonardo.asousa4\source\repos\servicehub\servicehub\obj\Debug\net8.0-windows\servicehub.FrmCliente.resources
