@@ -64,7 +64,9 @@ namespace servicehub
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
+            string busca = txtBuscar.Text;
 
+            CarregaGrid(busca);
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)

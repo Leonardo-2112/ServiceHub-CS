@@ -42,19 +42,21 @@
             cmbCategoria = new ComboBox();
             label7 = new Label();
             nudClasseDesconto = new NumericUpDown();
-            button3 = new Button();
             btnSalvar = new Button();
             btnEditar = new Button();
             button4 = new Button();
             button5 = new Button();
             pictureBox1 = new PictureBox();
             checkBox1 = new CheckBox();
-            dataGridView1 = new DataGridView();
+            dgvProduto = new DataGridView();
+            label8 = new Label();
+            txtId = new TextBox();
+            buttonExcluir = new Button();
             ((System.ComponentModel.ISupportInitialize)nudValorUnit).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudEstoqueMinimo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudClasseDesconto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvProduto).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -139,6 +141,7 @@
             // nudValorUnit
             // 
             nudValorUnit.Location = new Point(126, 123);
+            nudValorUnit.Maximum = new decimal(new int[] { 10000000, 0, 0, 0 });
             nudValorUnit.Name = "nudValorUnit";
             nudValorUnit.Size = new Size(110, 23);
             nudValorUnit.TabIndex = 9;
@@ -173,22 +176,6 @@
             nudClasseDesconto.Name = "nudClasseDesconto";
             nudClasseDesconto.Size = new Size(110, 23);
             nudClasseDesconto.TabIndex = 13;
-            // 
-            // button3
-            // 
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 128, 128);
-            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 192, 192);
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.ForeColor = Color.Firebrick;
-            button3.Image = Properties.Resources.Cancel;
-            button3.Location = new Point(503, 276);
-            button3.Name = "button3";
-            button3.Size = new Size(163, 61);
-            button3.TabIndex = 16;
-            button3.Text = "&Cancelar";
-            button3.TextImageRelation = TextImageRelation.ImageAboveText;
-            button3.UseVisualStyleBackColor = true;
             // 
             // btnSalvar
             // 
@@ -238,6 +225,7 @@
             button4.TextAlign = ContentAlignment.MiddleRight;
             button4.TextImageRelation = TextImageRelation.TextBeforeImage;
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button5
             // 
@@ -266,27 +254,64 @@
             checkBox1.Text = "Descontinuado";
             checkBox1.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvProduto
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(54, 356);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(632, 150);
-            dataGridView1.TabIndex = 23;
+            dgvProduto.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvProduto.Location = new Point(54, 356);
+            dgvProduto.Name = "dgvProduto";
+            dgvProduto.Size = new Size(632, 150);
+            dgvProduto.TabIndex = 23;
+            dgvProduto.CellClick += dgvProduto_CellClick;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(54, 23);
+            label8.Name = "label8";
+            label8.Size = new Size(18, 15);
+            label8.TabIndex = 24;
+            label8.Text = "ID";
+            // 
+            // txtId
+            // 
+            txtId.Location = new Point(126, 23);
+            txtId.Name = "txtId";
+            txtId.Size = new Size(100, 23);
+            txtId.TabIndex = 25;
+            // 
+            // buttonExcluir
+            // 
+            buttonExcluir.FlatAppearance.BorderSize = 0;
+            buttonExcluir.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 128, 128);
+            buttonExcluir.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 192, 192);
+            buttonExcluir.FlatStyle = FlatStyle.Flat;
+            buttonExcluir.Font = new Font("Arial Narrow", 11.25F);
+            buttonExcluir.ForeColor = Color.Firebrick;
+            buttonExcluir.Image = Properties.Resources.Delete;
+            buttonExcluir.Location = new Point(522, 276);
+            buttonExcluir.Name = "buttonExcluir";
+            buttonExcluir.Size = new Size(75, 57);
+            buttonExcluir.TabIndex = 51;
+            buttonExcluir.Text = "E&xcluir";
+            buttonExcluir.TextImageRelation = TextImageRelation.ImageAboveText;
+            buttonExcluir.UseVisualStyleBackColor = true;
+            buttonExcluir.Click += buttonExcluir_Click;
             // 
             // FrmProduto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 518);
-            Controls.Add(dataGridView1);
+            Controls.Add(buttonExcluir);
+            Controls.Add(txtId);
+            Controls.Add(label8);
+            Controls.Add(dgvProduto);
             Controls.Add(checkBox1);
             Controls.Add(pictureBox1);
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(btnEditar);
             Controls.Add(btnSalvar);
-            Controls.Add(button3);
             Controls.Add(nudClasseDesconto);
             Controls.Add(label7);
             Controls.Add(cmbCategoria);
@@ -308,7 +333,7 @@
             ((System.ComponentModel.ISupportInitialize)nudEstoqueMinimo).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudClasseDesconto).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvProduto).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -329,13 +354,15 @@
         private ComboBox cmbCategoria;
         private Label label7;
         private NumericUpDown nudClasseDesconto;
-        private Button button3;
         private Button btnSalvar;
         private Button btnEditar;
         private Button button4;
         private Button button5;
         private PictureBox pictureBox1;
         private CheckBox checkBox1;
-        private DataGridView dataGridView1;
+        private DataGridView dgvProduto;
+        private Label label8;
+        private TextBox txtId;
+        private Button buttonExcluir;
     }
 }

@@ -82,7 +82,7 @@ namespace ServiceHubClass
             cmd.Parameters.AddWithValue("spvalor_unit", ValorUnit);
             cmd.Parameters.AddWithValue("spunidade_venda", UnidadeVenda);
             cmd.Parameters.AddWithValue("spcategoria_id", Categoria.Id);
-            cmd.Parameters.AddWithValue("spestoque_minimo", EstoqueMinimo);    
+            cmd.Parameters.AddWithValue("spestoque_minimo", EstoqueMinimo);
             cmd.Parameters.AddWithValue("spclasse_desconto", ClasseDesconto);
             Id = Convert.ToInt32(cmd.ExecuteScalar());
             cmd.Connection.Close();
@@ -96,7 +96,7 @@ namespace ServiceHubClass
             cmd.CommandText = "sp_produto_update";//Passa qual procedure do banco de dados será chamada         
 
             //Passa Valores para a Procedure
-            cmd.Parameters.AddWithValue("spids", Id);
+            cmd.Parameters.AddWithValue("spid", Id);
             cmd.Parameters.AddWithValue("spcod_barras", CodBarras);
             cmd.Parameters.AddWithValue("spdescricao", Descricao);
             cmd.Parameters.AddWithValue("spvalor_unit", ValorUnit);
@@ -117,34 +117,42 @@ namespace ServiceHubClass
             Produto produto = new Produto();
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;//Define o tipo do comando SQL como Texto
-            cmd.CommandText = $"select * from produtos where id {id}";//Passa comando sql para executar no banco de dados
+            cmd.CommandText = $"select * from produtos where id = {id}";//Passa comando sql para executar no banco de dados
             var dr = cmd.ExecuteReader();//Lê e armazena na variavel oq retornou da consulta SQL
             if (dr.Read()) //dr.Read retorna verdadeiro caso tenha linhas afetadas
             {
                 //Instancia objeto passando parametros para o construtor
-                
-                produto = new (dr.GetInt32(0), 
-                    dr.GetString(1), 
-                    dr.GetString(2), 
-                    dr.GetDouble(3), 
-                    dr.GetString(4), 
+
+                produto = new(dr.GetInt32(0),
+                    dr.GetString(1),
+                    dr.GetString(2),
+                    dr.GetDouble(3),
+                    dr.GetString(4),
                     Categoria.ObterPorId(dr.GetInt32(5)), //(na posição 5 precisamos do id da categoria, chamamos o método ObterPorId que retorna um objeto do tipo Categoria que é esperado pelo construtor)
-                    dr.GetDouble(6), 
-                    dr.GetDouble(7), 
-                    (byte[])dr.GetValue(8),
-                    dr.GetDateTime(9), 
+                    dr.GetDouble(6),
+                    dr.GetDouble(7),
+                    dr.IsDBNull(8) ? null : (byte[])dr.GetValue(8),
+                    dr.GetDateTime(9),
                     dr.GetBoolean(10));
             }
             return produto;
 
         }
 
-        public static List<Produto> ObterLista()
+        public static List<Produto> ObterLista(string busca = "")
         {
-            List<Produto> produtos = new();//vazio
+            List<Produto> produtos = new List<Produto>();
             var cmd = Banco.Abrir();
-            cmd.CommandType = CommandType.Text;//Define o tipo do comando SQL como Texto
-            cmd.CommandText = $"select * from produtos order by descricao";//Passa comando sql para executar no banco de dados
+            cmd.CommandType = CommandType.Text;
+            if (string.IsNullOrWhiteSpace(busca))
+            {
+                cmd.CommandText = "SELECT * FROM produtos ORDER BY descricao";
+            }
+            else
+            {
+                cmd.CommandText = "SELECT * FROM produtos WHERE cod_barras LIKE @busca ORDER BY descricao";
+                cmd.Parameters.AddWithValue("@busca", "%" + busca + "%");
+            }
             var dr = cmd.ExecuteReader();//Lê e armazena na variavel oq retornou da consulta SQL
             while (dr.Read()) //dr.Read retorna verdadeiro caso tenha linhas afetadas
             {
@@ -169,6 +177,25 @@ namespace ServiceHubClass
             return produtos;
 
         }
+        public static bool Excluir(int id)
+        {
+            bool excluido = false;
 
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "UPDATE produtos SET descontinuado = 1 WHERE id = @id";
+            cmd.Parameters.AddWithValue("@id", id);
+
+            if (cmd.ExecuteNonQuery() > 0)
+            {
+                excluido = true;
+            }
+
+            cmd.Connection.Close();
+
+            return excluido;
+
+        }
     }
 }
